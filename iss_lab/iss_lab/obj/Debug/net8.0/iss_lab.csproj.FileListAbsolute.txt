@@ -1,0 +1,15 @@
+C:\Users\seu21\Documente\GitHub\dbms_lab\iss_lab\iss_lab\bin\Debug\net8.0\iss_lab.exe
+C:\Users\seu21\Documente\GitHub\dbms_lab\iss_lab\iss_lab\bin\Debug\net8.0\iss_lab.deps.json
+C:\Users\seu21\Documente\GitHub\dbms_lab\iss_lab\iss_lab\bin\Debug\net8.0\iss_lab.runtimeconfig.json
+C:\Users\seu21\Documente\GitHub\dbms_lab\iss_lab\iss_lab\bin\Debug\net8.0\iss_lab.dll
+C:\Users\seu21\Documente\GitHub\dbms_lab\iss_lab\iss_lab\bin\Debug\net8.0\iss_lab.pdb
+C:\Users\seu21\Documente\GitHub\dbms_lab\iss_lab\iss_lab\obj\Debug\net8.0\iss_lab.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\seu21\Documente\GitHub\dbms_lab\iss_lab\iss_lab\obj\Debug\net8.0\iss_lab.AssemblyInfoInputs.cache
+C:\Users\seu21\Documente\GitHub\dbms_lab\iss_lab\iss_lab\obj\Debug\net8.0\iss_lab.AssemblyInfo.cs
+C:\Users\seu21\Documente\GitHub\dbms_lab\iss_lab\iss_lab\obj\Debug\net8.0\iss_lab.csproj.CoreCompileInputs.cache
+C:\Users\seu21\Documente\GitHub\dbms_lab\iss_lab\iss_lab\obj\Debug\net8.0\iss_lab.sourcelink.json
+C:\Users\seu21\Documente\GitHub\dbms_lab\iss_lab\iss_lab\obj\Debug\net8.0\iss_lab.dll
+C:\Users\seu21\Documente\GitHub\dbms_lab\iss_lab\iss_lab\obj\Debug\net8.0\refint\iss_lab.dll
+C:\Users\seu21\Documente\GitHub\dbms_lab\iss_lab\iss_lab\obj\Debug\net8.0\iss_lab.pdb
+C:\Users\seu21\Documente\GitHub\dbms_lab\iss_lab\iss_lab\obj\Debug\net8.0\iss_lab.genruntimeconfig.cache
+C:\Users\seu21\Documente\GitHub\dbms_lab\iss_lab\iss_lab\obj\Debug\net8.0\ref\iss_lab.dll
