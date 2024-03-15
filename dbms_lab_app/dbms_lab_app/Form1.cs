@@ -51,9 +51,6 @@ namespace dbms_lab_app
             this.dataGridView1.DataSource = ds.Tables["projects"];
             this.dataGridView2.DataSource = this.dataGridView1.DataSource;
             this.dataGridView1.DataMember = "Projects_Resources";
-
-            cmdBuilder.GetUpdateCommand();
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -61,52 +58,17 @@ namespace dbms_lab_app
 
         }
 
-        private void deleteButton_Click(object sender, EventArgs e)
-        {
-            daResources.Update(ds, "resources");
-        }
-
         private void updateButton_Click(object sender, EventArgs e)
         {
-            cmdBuilder = new SqlCommandBuilder(daResources);
             cmdBuilder.GetInsertCommand();
             daResources.Update(ds, "resources");
-            daProjects.Update(ds, "projects");
         }
 
-        private void addButton_Click(object sender, EventArgs e)
+        private void deleteButton_Click(object sender, EventArgs e)
         {
+            int rowIndex = dataGridView1.CurrentCell.RowIndex;
+            dataGridView1.Rows.RemoveAt(rowIndex);
             daResources.Update(ds, "resources");
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_2(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             updateButton = new Button();
+            deleteButton = new Button();
             label1 = new Label();
             label2 = new Label();
             dataGridView1 = new DataGridView();
@@ -39,13 +40,23 @@
             // 
             // updateButton
             // 
-            updateButton.Location = new Point(283, 377);
+            updateButton.Location = new Point(195, 500);
             updateButton.Name = "updateButton";
             updateButton.Size = new Size(235, 61);
             updateButton.TabIndex = 2;
             updateButton.Text = "Update";
             updateButton.UseVisualStyleBackColor = true;
             updateButton.Click += updateButton_Click;
+            // 
+            // deleteButton
+            // 
+            deleteButton.Location = new Point(623, 500);
+            deleteButton.Name = "deleteButton";
+            deleteButton.Size = new Size(235, 61);
+            deleteButton.TabIndex = 2;
+            deleteButton.Text = "Delete";
+            deleteButton.UseVisualStyleBackColor = true;
+            deleteButton.Click += deleteButton_Click;
             // 
             // label1
             // 
@@ -55,7 +66,6 @@
             label1.Size = new Size(71, 20);
             label1.TabIndex = 4;
             label1.Text = "resources";
-            label1.Click += label1_Click_2;
             // 
             // label2
             // 
@@ -65,38 +75,36 @@
             label2.Size = new Size(62, 20);
             label2.TabIndex = 5;
             label2.Text = "projects";
-            label2.Click += label2_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(-4, 68);
+            dataGridView1.Location = new Point(12, 68);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(402, 293);
+            dataGridView1.Size = new Size(500, 400);
             dataGridView1.TabIndex = 6;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // dataGridView2
             // 
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Location = new Point(426, 68);
+            dataGridView2.Location = new Point(556, 68);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(389, 293);
+            dataGridView2.Size = new Size(655, 400);
             dataGridView2.TabIndex = 7;
-            dataGridView2.CellContentClick += dataGridView2_CellContentClick;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1333, 752);
             Controls.Add(dataGridView2);
             Controls.Add(dataGridView1);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(updateButton);
+            Controls.Add(deleteButton);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
@@ -108,6 +116,7 @@
 
         #endregion
         private Button updateButton;
+        private Button deleteButton;
         private Label label1;
         private Label label2;
         private DataGridView dataGridView1;
