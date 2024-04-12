@@ -1,75 +1,77 @@
-using System;
-using System.Windows.Forms;
-using System.Drawing;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
+﻿using System;
 using System.Data;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Configuration;
 
-
-namespace dbms_lab_app
+namespace WindowsForm
 {
     public partial class Form1 : Form
     {
+        private DataSet dataSet = new DataSet();
+        private SqlConnection dbConnection;
 
-        SqlConnection conn;
-        SqlDataAdapter daResources;
-        SqlDataAdapter daProjects;
-        DataSet ds;
-        BindingSource bsResources;
-        BindingSource bsProjects;
+        private SqlDataAdapter dataAdapterProjects, dataAdapterResources;
+        private readonly BindingSource bindingProjects = new BindingSource();
+        private readonly BindingSource bindingResources = new BindingSource();
 
-        SqlCommandBuilder cmdBuilder;
-
-        string queryResources = "SELECT * FROM resources";
-        string queryProjects = "SELECT * FROM projects";
-
-        public Form1()
+        private void InitializeDatabase()
         {
-            InitializeComponent();
-            FillData();
+            String connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+            String database = ConfigurationManager.AppSettings["Database"];
+            dbConnection = new SqlConnection(String.Format(connectionString, database));
+            dataAdapterProjects = new SqlDataAdapter(ConfigurationManager.AppSettings["SelectParent"], dbConnection);
+            dataAdapterResources = new SqlDataAdapter(ConfigurationManager.AppSettings["SelectChild"], dbConnection);
+
+            new SqlCommandBuilder(dataAdapterResources);
+            new SqlCommandBuilder(dataAdapterProjects).GetInsertCommand();
+
+            dataAdapterProjects.Fill(dataSet, ConfigurationManager.AppSettings["ParentTableName"]);
+            dataAdapterResources.Fill(dataSet, ConfigurationManager.AppSettings["ChildTableName"]);
+
+            var dataRelation = new DataRelation(
+                ConfigurationManager.AppSettings["ForeignKey"],
+                dataSet.Tables[ConfigurationManager.AppSettings["ParentTableName"]].Columns[ConfigurationManager.AppSettings["ParentReferencedKey"]],
+                dataSet.Tables[ConfigurationManager.AppSettings["ChildTableName"]].Columns[ConfigurationManager.AppSettings["ChildForeignKey"]]);
+            dataSet.Relations.Add(dataRelation);
         }
 
-        private void FillData()
+        private void InitializeUI()
         {
-            conn = new SqlConnection("Data Source=Roger;Initial Catalog=app;Integrated Security=True");
+            bindingProjects.DataSource = dataSet;
+            bindingProjects.DataMember = ConfigurationManager.AppSettings["ParentTableName"];
 
-            daResources = new SqlDataAdapter(queryResources, conn);
-            daProjects = new SqlDataAdapter(queryProjects, conn);
+            bindingResources.DataSource = bindingProjects;
+            bindingResources.DataMember = ConfigurationManager.AppSettings["ForeignKey"];
 
-            ds = new DataSet();
+            dataGridProjects.DataSource = bindingProjects;
+            dataGridResources.DataSource = bindingResources;
+        }
 
-            daResources.Fill(ds, "resources");
-            daProjects.Fill(ds, "projects");
-
-            cmdBuilder = new SqlCommandBuilder(daResources);
-
-
-            ds.Relations.Add("Projects_Resources",
-                ds.Tables["projects"].Columns["project_id"],
-                ds.Tables["resources"].Columns["project_id"]);
-
-            this.dataGridView1.DataSource = ds.Tables["projects"];
-            this.dataGridView2.DataSource = this.dataGridView1.DataSource;
-            this.dataGridView1.DataMember = "Projects_Resources";
+        private void buttonUpdateDB_Click(object sender, EventArgs e)
+        {
+            dataAdapterResources.Update(dataSet, ConfigurationManager.AppSettings["ChildTableName"]);
+            dataAdapterProjects.Update(dataSet, ConfigurationManager.AppSettings["ParentTableName"]);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            InitializeDatabase();
+            InitializeUI();
         }
 
-        private void updateButton_Click(object sender, EventArgs e)
+        private void buttonRefreshDB_Click(object sender, EventArgs e)
         {
-            cmdBuilder.GetInsertCommand();
-            daResources.Update(ds, "resources");
+            dataSet.Tables[ConfigurationManager.AppSettings["ChildTableName"]].Clear();
+            dataSet.Tables[ConfigurationManager.AppSettings["ParentTableName"]].Clear();
+            dataAdapterProjects.Fill(dataSet, ConfigurationManager.AppSettings["ParentTableName"]);
+            dataAdapterResources.Fill(dataSet, ConfigurationManager.AppSettings["ChildTableName"]);
         }
 
-        private void deleteButton_Click(object sender, EventArgs e)
+
+        public Form1()
         {
-            int rowIndex = dataGridView1.CurrentCell.RowIndex;
-            dataGridView1.Rows.RemoveAt(rowIndex);
-            daResources.Update(ds, "resources");
+            InitializeComponent();
         }
     }
 }

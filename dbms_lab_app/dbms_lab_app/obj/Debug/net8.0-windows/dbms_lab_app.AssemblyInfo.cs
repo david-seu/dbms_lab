@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("dbms_lab_app")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3194f1d5713f71f40547801f351b440c31342458")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b76e7a097aea9019d3e33a33a64a53ca1a39debd")]
 [assembly: System.Reflection.AssemblyProductAttribute("dbms_lab_app")]
 [assembly: System.Reflection.AssemblyTitleAttribute("dbms_lab_app")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

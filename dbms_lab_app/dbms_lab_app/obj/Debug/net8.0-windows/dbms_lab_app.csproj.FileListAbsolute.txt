@@ -3,7 +3,6 @@ C:\Users\seu21\Documente\GitHub\dbms_lab\dbms_lab_app\dbms_lab_app\bin\Debug\net
 C:\Users\seu21\Documente\GitHub\dbms_lab\dbms_lab_app\dbms_lab_app\bin\Debug\net8.0-windows\dbms_lab_app.runtimeconfig.json
 C:\Users\seu21\Documente\GitHub\dbms_lab\dbms_lab_app\dbms_lab_app\bin\Debug\net8.0-windows\dbms_lab_app.dll
 C:\Users\seu21\Documente\GitHub\dbms_lab\dbms_lab_app\dbms_lab_app\bin\Debug\net8.0-windows\dbms_lab_app.pdb
-C:\Users\seu21\Documente\GitHub\dbms_lab\dbms_lab_app\dbms_lab_app\obj\Debug\net8.0-windows\dbms_lab_app.Form1.resources
 C:\Users\seu21\Documente\GitHub\dbms_lab\dbms_lab_app\dbms_lab_app\obj\Debug\net8.0-windows\dbms_lab_app.csproj.GenerateResource.cache
 C:\Users\seu21\Documente\GitHub\dbms_lab\dbms_lab_app\dbms_lab_app\obj\Debug\net8.0-windows\dbms_lab_app.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\seu21\Documente\GitHub\dbms_lab\dbms_lab_app\dbms_lab_app\obj\Debug\net8.0-windows\dbms_lab_app.AssemblyInfoInputs.cache
@@ -23,3 +22,5 @@ C:\Users\seu21\Documente\GitHub\dbms_lab\dbms_lab_app\dbms_lab_app\bin\Debug\net
 C:\Users\seu21\Documente\GitHub\dbms_lab\dbms_lab_app\dbms_lab_app\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\seu21\Documente\GitHub\dbms_lab\dbms_lab_app\dbms_lab_app\obj\Debug\net8.0-windows\dbms_lab_app.csproj.AssemblyReference.cache
 C:\Users\seu21\Documente\GitHub\dbms_lab\dbms_lab_app\dbms_lab_app\obj\Debug\net8.0-windows\dbms_lab.49888C3D.Up2Date
+C:\Users\seu21\Documente\GitHub\dbms_lab\dbms_lab_app\dbms_lab_app\bin\Debug\net8.0-windows\dbms_lab_app.dll.config
+C:\Users\seu21\Documente\GitHub\dbms_lab\dbms_lab_app\dbms_lab_app\obj\Debug\net8.0-windows\WindowsForm.Form1.resources
