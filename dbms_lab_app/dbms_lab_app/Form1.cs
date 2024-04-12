@@ -44,6 +44,7 @@ namespace dbms_lab_app
 
             cmdBuilder = new SqlCommandBuilder(daResources);
 
+
             ds.Relations.Add("Projects_Resources",
                 ds.Tables["projects"].Columns["project_id"],
                 ds.Tables["resources"].Columns["project_id"]);
