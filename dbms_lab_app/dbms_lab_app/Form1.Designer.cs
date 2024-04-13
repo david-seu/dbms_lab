@@ -16,93 +16,114 @@ namespace WindowsForm
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridProjects = new System.Windows.Forms.DataGridView();
-            this.dataGridResources = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.buttonUpdateDB = new System.Windows.Forms.Button();
-            this.buttonRefreshDB = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridProjects)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridResources)).BeginInit();
-            this.SuspendLayout();
+            dataGridProjects = new DataGridView();
+            dataGridResources = new DataGridView();
+            label1 = new Label();
+            label2 = new Label();
+            buttonUpdateDB = new Button();
+            buttonRefreshDB = new Button();
+            buttonDeleteDB = new Button();
+            ((System.ComponentModel.ISupportInitialize)dataGridProjects).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridResources).BeginInit();
+            SuspendLayout();
             // 
             // dataGridProjects
             // 
-            this.dataGridProjects.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridProjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridProjects.Location = new System.Drawing.Point(35, 35);
-            this.dataGridProjects.Name = "dataGridProjects";
-            this.dataGridProjects.RowTemplate.Height = 25;
-            this.dataGridProjects.Size = new System.Drawing.Size(465, 174);
-            this.dataGridProjects.TabIndex = 0;
+            dataGridProjects.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridProjects.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridProjects.Location = new Point(47, 54);
+            dataGridProjects.Margin = new Padding(4, 5, 4, 5);
+            dataGridProjects.Name = "dataGridProjects";
+            dataGridProjects.RowHeadersWidth = 51;
+            dataGridProjects.RowTemplate.Height = 25;
+            dataGridProjects.Size = new Size(620, 268);
+            dataGridProjects.TabIndex = 0;
             // 
             // dataGridResources
             // 
-            this.dataGridResources.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridResources.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridResources.Location = new System.Drawing.Point(35, 249);
-            this.dataGridResources.Name = "dataGridResources";
-            this.dataGridResources.RowTemplate.Height = 25;
-            this.dataGridResources.Size = new System.Drawing.Size(465, 167);
-            this.dataGridResources.TabIndex = 1;
+            dataGridResources.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridResources.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridResources.Location = new Point(47, 383);
+            dataGridResources.Margin = new Padding(4, 5, 4, 5);
+            dataGridResources.Name = "dataGridResources";
+            dataGridResources.RowHeadersWidth = 51;
+            dataGridResources.RowTemplate.Height = 25;
+            dataGridResources.Size = new Size(620, 257);
+            dataGridResources.TabIndex = 1;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(32, 224);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Projects";
+            label1.AutoSize = true;
+            label1.Location = new Point(43, 345);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(61, 20);
+            label1.TabIndex = 2;
+            label1.Text = "Projects";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(35, 10);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Resources";
+            label2.AutoSize = true;
+            label2.Location = new Point(47, 15);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(75, 20);
+            label2.TabIndex = 3;
+            label2.Text = "Resources";
             // 
             // buttonUpdateDB
             // 
-            this.buttonUpdateDB.Location = new System.Drawing.Point(579, 153);
-            this.buttonUpdateDB.Name = "buttonUpdateDB";
-            this.buttonUpdateDB.Size = new System.Drawing.Size(87, 29);
-            this.buttonUpdateDB.TabIndex = 4;
-            this.buttonUpdateDB.Text = "Update DB";
-            this.buttonUpdateDB.UseVisualStyleBackColor = true;
-            this.buttonUpdateDB.Click += new System.EventHandler(this.buttonUpdateDB_Click);
+            buttonUpdateDB.Location = new Point(772, 235);
+            buttonUpdateDB.Margin = new Padding(4, 5, 4, 5);
+            buttonUpdateDB.Name = "buttonUpdateDB";
+            buttonUpdateDB.Size = new Size(116, 45);
+            buttonUpdateDB.TabIndex = 4;
+            buttonUpdateDB.Text = "Update DB";
+            buttonUpdateDB.UseVisualStyleBackColor = true;
+            buttonUpdateDB.Click += buttonUpdateDB_Click;
             // 
             // buttonRefreshDB
             // 
-            this.buttonRefreshDB.Location = new System.Drawing.Point(579, 271);
-            this.buttonRefreshDB.Name = "buttonRefreshDB";
-            this.buttonRefreshDB.Size = new System.Drawing.Size(87, 29);
-            this.buttonRefreshDB.TabIndex = 5;
-            this.buttonRefreshDB.Text = "Refresh DB";
-            this.buttonRefreshDB.UseVisualStyleBackColor = true;
-            this.buttonRefreshDB.Click += new System.EventHandler(this.buttonRefreshDB_Click);
+            buttonRefreshDB.Location = new Point(772, 383);
+            buttonRefreshDB.Margin = new Padding(4, 5, 4, 5);
+            buttonRefreshDB.Name = "buttonRefreshDB";
+            buttonRefreshDB.Size = new Size(116, 45);
+            buttonRefreshDB.TabIndex = 5;
+            buttonRefreshDB.Text = "Refresh DB";
+            buttonRefreshDB.UseVisualStyleBackColor = true;
+            buttonRefreshDB.Click += buttonRefreshDB_Click;
+            // 
+            // buttonDeleteDB
+            // 
+            buttonDeleteDB.Location = new Point(772, 538);
+            buttonDeleteDB.Margin = new Padding(4, 5, 4, 5);
+            buttonDeleteDB.Name = "buttonDeleteDB";
+            buttonDeleteDB.Size = new Size(116, 45);
+            buttonDeleteDB.TabIndex = 5;
+            buttonDeleteDB.Text = "Delete DB";
+            buttonDeleteDB.UseVisualStyleBackColor = true;
+            buttonDeleteDB.Click += buttonDeleteDB_Click;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(880, 505);
-            this.Controls.Add(this.buttonRefreshDB);
-            this.Controls.Add(this.buttonUpdateDB);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridResources);
-            this.Controls.Add(this.dataGridProjects);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridProjects)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridResources)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1173, 777);
+            Controls.Add(buttonRefreshDB);
+            Controls.Add(buttonUpdateDB);
+            Controls.Add(buttonDeleteDB);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(dataGridResources);
+            Controls.Add(dataGridProjects);
+            Margin = new Padding(4, 5, 4, 5);
+            Name = "Form1";
+            Text = "Form1";
+            Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridProjects).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridResources).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -113,5 +134,6 @@ namespace WindowsForm
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonUpdateDB;
         private System.Windows.Forms.Button buttonRefreshDB;
+        private System.Windows.Forms.Button buttonDeleteDB;
     }
 }

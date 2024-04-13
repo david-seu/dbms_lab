@@ -23,8 +23,8 @@ namespace WindowsForm
             dataAdapterProjects = new SqlDataAdapter(ConfigurationManager.AppSettings["SelectParent"], dbConnection);
             dataAdapterResources = new SqlDataAdapter(ConfigurationManager.AppSettings["SelectChild"], dbConnection);
 
-            new SqlCommandBuilder(dataAdapterResources);
-            new SqlCommandBuilder(dataAdapterProjects).GetInsertCommand();
+            new SqlCommandBuilder(dataAdapterResources).GetInsertCommand();
+            new SqlCommandBuilder(dataAdapterProjects);
 
             dataAdapterProjects.Fill(dataSet, ConfigurationManager.AppSettings["ParentTableName"]);
             dataAdapterResources.Fill(dataSet, ConfigurationManager.AppSettings["ChildTableName"]);
@@ -68,6 +68,12 @@ namespace WindowsForm
             dataAdapterResources.Fill(dataSet, ConfigurationManager.AppSettings["ChildTableName"]);
         }
 
+
+        private void buttonDeleteDB_Click(object sender, EventArgs e)
+        {
+            int rowIndex = dataGridResources.CurrentCell.RowIndex;
+            dataGridResources.Rows.RemoveAt(rowIndex);
+        }
 
         public Form1()
         {
