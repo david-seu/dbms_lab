@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SVI84Tzd24VWDNep7I+h/0ZOvsc27F9EaONGqK76JIX9PfAFcB0ZT9fHv/XfkPNjrgrYcqzSWDWQZAwnJHqzxA==",
+  "dgSpecHash": "7NIvHRkgQtIMwt5xR+6KZt3xw+bnCiKN6toc3t8A8eJRneOysLmFOJuTV0NJwW/iEqEht37s/Qr0qP9PqPfI4g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\seu21\\Documente\\GitHub\\dbms_lab\\dbms_lab_app\\dbms_lab_app\\dbms_lab_app.csproj",
+  "projectFilePath": "C:\\Users\\seu21\\Documente\\GitHub\\dbms_lab\\lab1&2\\dbms_lab_app\\dbms_lab_app.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\seu21\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\seu21\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

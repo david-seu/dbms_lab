@@ -15,24 +15,25 @@ namespace WindowsForm
         private readonly BindingSource bindingProjects = new BindingSource();
         private readonly BindingSource bindingResources = new BindingSource();
 
+
         private void InitializeDatabase()
         {
-            String connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-            String database = ConfigurationManager.AppSettings["Database"];
+            String connectionString = " ";
+            String database = "app";
             dbConnection = new SqlConnection(String.Format(connectionString, database));
-            dataAdapterProjects = new SqlDataAdapter(ConfigurationManager.AppSettings["SelectParent"], dbConnection);
-            dataAdapterResources = new SqlDataAdapter(ConfigurationManager.AppSettings["SelectChild"], dbConnection);
+            dataAdapterProjects = new SqlDataAdapter("select * from areas", dbConnection);
+            dataAdapterResources = new SqlDataAdapter("select * from projects", dbConnection);
 
-            new SqlCommandBuilder(dataAdapterResources).GetInsertCommand();
+            new SqlCommandBuilder(dataAdapterResources);
             new SqlCommandBuilder(dataAdapterProjects);
 
-            dataAdapterProjects.Fill(dataSet, ConfigurationManager.AppSettings["ParentTableName"]);
-            dataAdapterResources.Fill(dataSet, ConfigurationManager.AppSettings["ChildTableName"]);
+            dataAdapterProjects.Fill(dataSet, "areas");
+            dataAdapterResources.Fill(dataSet, "projects");
 
             var dataRelation = new DataRelation(
-                ConfigurationManager.AppSettings["ForeignKey"],
-                dataSet.Tables[ConfigurationManager.AppSettings["ParentTableName"]].Columns[ConfigurationManager.AppSettings["ParentReferencedKey"]],
-                dataSet.Tables[ConfigurationManager.AppSettings["ChildTableName"]].Columns[ConfigurationManager.AppSettings["ChildForeignKey"]]);
+                "fk_area",
+                dataSet.Tables["areas"].Columns["area_id"],
+                dataSet.Tables["projects"].Columns["area_id"]);
             dataSet.Relations.Add(dataRelation);
         }
 

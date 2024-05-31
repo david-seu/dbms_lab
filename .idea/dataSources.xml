@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="postgres@mpp-david.postgres.database.azure.com" uuid="7bbb3e6a-286f-4b56-bae7-baafd3b84e1b">
+    <data-source source="LOCAL" name="your_anime_list@localhost" uuid="907f0ae5-532c-4370-9687-65eb04faad95">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://mpp-david.postgres.database.azure.com:5432/postgres</jdbc-url>
+      <jdbc-url>jdbc:postgresql://localhost:5432/your_anime_list</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="BulldozerServer_db@bulldozerserverdbserver.database.windows.net" uuid="0db06555-854b-4d2f-bd69-d54beb9241a0">
-      <driver-ref>azure.ms</driver-ref>
+    <data-source source="LOCAL" name="@localhost" uuid="4fa0a9a8-6400-4ca0-ad4c-3f76859b6d25">
+      <driver-ref>sqlserver.ms</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
-      <jdbc-url>jdbc:sqlserver://bulldozerserverdbserver.database.windows.net:1433;database=BulldozerServer_db;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;</jdbc-url>
+      <jdbc-url>jdbc:sqlserver://localhost</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
