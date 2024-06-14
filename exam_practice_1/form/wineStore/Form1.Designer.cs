@@ -1,4 +1,4 @@
-﻿namespace wineStore
+﻿namespace examDB
 {
     partial class Form1
     {
@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dgvWines = new DataGridView();
+            dgvAppointments = new DataGridView();
             saveButton = new Button();
-            listBox1 = new ListBox();
-            ((System.ComponentModel.ISupportInitialize)dgvWines).BeginInit();
+            dgvPatient = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvAppointments).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvPatient).BeginInit();
             SuspendLayout();
             // 
-            // dgvWines
+            // dgvAppointments
             // 
-            dgvWines.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvWines.Location = new Point(693, 53);
-            dgvWines.Name = "dgvWines";
-            dgvWines.RowHeadersWidth = 51;
-            dgvWines.Size = new Size(584, 290);
-            dgvWines.TabIndex = 1;
+            dgvAppointments.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAppointments.Location = new Point(693, 53);
+            dgvAppointments.Name = "dgvAppointments";
+            dgvAppointments.RowHeadersWidth = 51;
+            dgvAppointments.Size = new Size(584, 290);
+            dgvAppointments.TabIndex = 1;
             // 
             // saveButton
             // 
@@ -53,32 +54,34 @@
             saveButton.UseVisualStyleBackColor = true;
             saveButton.Click += saveButton_Click;
             // 
-            // listBox1
+            // dgvPatient
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(116, 100);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(150, 104);
-            listBox1.TabIndex = 3;
+            dgvPatient.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvPatient.Location = new Point(47, 53);
+            dgvPatient.Name = "dgvPatient";
+            dgvPatient.RowHeadersWidth = 51;
+            dgvPatient.Size = new Size(546, 290);
+            dgvPatient.TabIndex = 3;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1329, 450);
-            Controls.Add(listBox1);
+            Controls.Add(dgvPatient);
             Controls.Add(saveButton);
-            Controls.Add(dgvWines);
+            Controls.Add(dgvAppointments);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)dgvWines).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAppointments).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvPatient).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-        private DataGridView dgvWines;
+        private DataGridView dgvAppointments;
         private Button saveButton;
-        private ListBox listBox1;
+        private DataGridView dgvPatient;
     }
 }

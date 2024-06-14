@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xdf24/Q2vsqy4JBGJv2Fm+Wruwgfu1pqSNaNoNoIroFo5QzNvsIAa+FQ3YXqFjaYpfqY4YoYLiK1DxU5/XTZcQ==",
+  "dgSpecHash": "xkUnIywU9UAu8CgRUXP8Xex1VOUGvTjKGE9I9wZReEVobt7vdEfYYwUyhtQ/RrSunOEax4/2z4o+1Eon5dZA/A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\seu21\\Documente\\GitHub\\dbms_lab\\exam_practice_1\\form\\wineStore\\wineStore.csproj",
+  "projectFilePath": "C:\\Users\\seu21\\Documente\\GitHub\\dbms_lab\\exam_practice_1\\form\\wineStore\\examDB.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\seu21\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\seu21\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

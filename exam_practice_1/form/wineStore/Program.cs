@@ -1,4 +1,4 @@
-namespace wineStore
+namespace examDB
 {
     internal static class Program
     {
